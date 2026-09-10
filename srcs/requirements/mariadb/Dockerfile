@@ -6,4 +6,4 @@ COPY tools/script.sh /script.sh
 
 RUN  chmod +x /script.sh  && mv script.sh  /usr/local/bin/script
 
-CMD ["script"]
+CMD ["script.sh"]
