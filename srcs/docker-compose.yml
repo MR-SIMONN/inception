@@ -6,9 +6,9 @@ services:
       context: requirements/mariadb
     env_file:
       - .env
-    secrets:
-      - mysql_password
-      - mysql_root_password
+    # secrets:
+    #   - mysql_password
+    #   - mysql_root_password
     volumes:
       - mariadb_data:/var/lib/mysql
     networks:
@@ -21,10 +21,10 @@ services:
       context: requirements/wordpress
     env_file:
       - .env
-    secrets:
-      - mysql_password
-      - wordpress_password
-      - wordpress_admin_password
+    # secrets:
+    #   - mysql_password
+    #   - wordpress_password
+    #   - wordpress_admin_password
     volumes:
       - wordpress_data:/var/www/html
     networks:
@@ -43,20 +43,22 @@ services:
       - wordpress_data:/var/www/html
     networks:
       - inception_network
+    env_file:
+      - .env
     depends_on:
       - wordpress
     restart: on-failure
 
 
-secrets:
-  mysql_password:
-    file: ../secrets/db_password.txt
-  mysql_root_password:
-    file: ../secrets/db_root_password.txt
-  wordpress_password:
-    file: ../secrets/db_password.txt
-  wordpress_admin_password:
-    file: ../secrets/credentials.txt
+# secrets:
+#   mysql_password:
+    
+#   mysql_root_password:
+#     file: ../secrets/db_root_password.txt
+#   wordpress_password:
+#     file: ../secrets/db_password.txt
+#   wordpress_admin_password:
+#     file: ../secrets/credentials.txt
 
 networks:
   inception_network:

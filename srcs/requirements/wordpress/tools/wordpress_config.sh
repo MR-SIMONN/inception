@@ -1,13 +1,15 @@
 #!/bin/bash
 
-MYSQL_PASSWORD=$(cat /run/secrets/mysql_password)
-WORDPRESS_PASSWORD=$(cat /run/secrets/wordpress_password)
-WORDPRESS_ADMIN_PASSWORD=$(cat /run/secrets/wordpress_admin_password)
+# MYSQL_PASSWORD=$(cat /run/secrets/mysql_password)
+# WORDPRESS_PASSWORD=$(cat /run/secrets/wordpress_password)
+# WORDPRESS_ADMIN_PASSWORD=$(cat /run/secrets/wordpress_admin_password)ve se
 
 cd /var/www/html
 mariadb-admin ping -h"mariadb" -u "${MYSQL_USER}" -p"${MYSQL_PASSWORD}" --wait=60 --silent
 
-if [ ! -f "wp-settings.php" ]; then
+ls -la
+
+if [ ! -f "wp-config.php" ]; then
     echo "installing wordpress..."
 
     wp core download --allow-root
