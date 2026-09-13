@@ -16,8 +16,4 @@ fi
 EOF
 
 
-
-
-
-
-
+exec mysqld --user=mysql
