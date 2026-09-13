@@ -16,6 +16,4 @@ COPY tools/wordpress_config.sh /usr/local/bin/wordpress_config.sh
 
 RUN chmod +x /usr/local/bin/wordpress_config.sh
 
-WORKDIR /var/www/html
-
 CMD ["wordpress_config.sh"]

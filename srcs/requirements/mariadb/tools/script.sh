@@ -12,4 +12,5 @@ MYSQL_ROOT_PASSWORD=$(cat /run/secrets/mysql_root_password)
     GRANT ALL PRIVILEGES ON $MYSQL_DATABASE.* TO '$MYSQL_USER'@'%';
 EOF
 
+
 exec mysqld --user=mysql
