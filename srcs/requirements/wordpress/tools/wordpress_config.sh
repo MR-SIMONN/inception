@@ -3,8 +3,6 @@
 cd /var/www/html
 mariadb-admin ping -h "mariadb" -u "${MYSQL_USER}" -p "${MYSQL_PASSWORD}" --wait=60 --silent
 
-ls -la
-
 if [ ! -f "wp-config.php" ]; then
     echo "installing wordpress..."
 
