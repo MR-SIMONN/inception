@@ -10,9 +10,8 @@ all:
 down:
 	docker compose -f $(COMPOSE_FILE) down
 
-clean: down
-	docker system prune -a -f
-	docker volume prune -f
+clean:
+	docker compose -f $(COMPOSE_FILE) down --volumes
 
 fclean: clean
 	sudo rm -rf $(DATA_PATH)/mariadb/*

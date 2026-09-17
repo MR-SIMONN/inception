@@ -10,9 +10,7 @@ RUN openssl req -x509 -nodes \
 	-subj "/CN=moel-hai.42.fr"
 
 
-#  reminde sina3i
 COPY conf/nginx.conf /etc/nginx/conf.d/nginx.conf
 
 CMD ["nginx", "-g", "daemon off;"]
-# 		index index.php; try to remove this from conf
 

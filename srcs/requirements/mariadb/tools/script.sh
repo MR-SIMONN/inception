@@ -1,6 +1,5 @@
 #!/bin/bash
 
-#ERROR: 1290  The MariaDB server is running with the --skip-grant-tables option so it cannot execute this statement
 if [ ! -d "/var/lib/mysql/mysql" ]; then
     echo "Database not found. Initializing..."
     mysql_install_db --user=mysql --datadir=/var/lib/mysql
