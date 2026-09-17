@@ -1,7 +1,7 @@
 *This project has been created as part of the 42 curriculum by moel-hai.*
 
 ## Description
-Inception is a system administration project that deploys a containerized web infrastructure using Docker Compose. The architecture relies on independent containers for Nginx, MariaDB, and WordPress running PHP-FPM, all built from custom Debian 11 (Bullseye) base images. 
+Inception is a system administration project that deploys a containerized web infrastructure using Docker Compose. The architecture relies on independent containers for Nginx, MariaDB, and WordPress running PHP-FPM, all built from custom Debian 12 (Bookworm) base images. 
 
 ### Technical Choices & Comparisons
 *   **Virtual Machines vs Docker:** A VM virtualizes the physical hardware to run a full, heavy guest OS. Docker virtualizes only the OS kernel, allowing lightweight containers to share the host's kernel while remaining isolated.
