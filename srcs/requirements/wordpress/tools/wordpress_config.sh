@@ -4,10 +4,9 @@ cd /var/www/html
 sleep 10
 
 if [ ! -f "wp-config.php" ]; then
-    echo "installing wordpress..."
 
     wp core download --allow-root
-    
+
     wp config create \
         --dbname=$MYSQL_DATABASE \
         --dbuser=$MYSQL_USER \
@@ -27,10 +26,6 @@ if [ ! -f "wp-config.php" ]; then
         --user_pass=$WORDPRESS_PASSWORD \
         --role=author \
         --allow-root
-        
-    echo "wordpress is installed and ready!"
-else
-    echo "wordpress is already installed."
 fi
 
 chown -R www-data:www-data /var/www/html

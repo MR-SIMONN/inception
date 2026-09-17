@@ -1,9 +1,5 @@
 #!/bin/bash
 
-if [ ! -d "/var/lib/mysql/mysql" ]; then
-    echo "Database not found. Initializing..."
-    mysql_install_db --user=mysql --datadir=/var/lib/mysql
-fi
     mysqld --user=mysql --bootstrap << EOF
     FLUSH PRIVILEGES;
     CREATE DATABASE IF NOT EXISTS $MYSQL_DATABASE;

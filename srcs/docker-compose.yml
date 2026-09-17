@@ -2,6 +2,7 @@ services:
 
   mariadb:
     container_name: mariadb
+    image: mariadb
     build:
       context: requirements/mariadb
     env_file:
@@ -14,6 +15,7 @@ services:
 
   wordpress:
     container_name: wordpress
+    image: wordpress
     build:
       context: requirements/wordpress
     env_file:
@@ -28,6 +30,7 @@ services:
 
   nginx:
     container_name: nginx
+    image: nginx
     build:
       context: requirements/nginx
     ports:
