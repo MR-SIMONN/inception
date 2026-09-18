@@ -13,7 +13,7 @@ This stack provides a fully functional, secure WordPress website. It runs behind
 *   **Administration Panel:** Go to `https://moel-hai.42.fr/wp-admin` and log in with your administrator account. Note: The site is only accessible via port 443 (HTTPS); port 80 (HTTP) is disabled.
 
 ## Managing Credentials
-All sensitive credentials (database passwords, admin user details) are managed via local `.env` files and Docker secrets located in the `srcs` directory. Do not expose these files publicly.
+All sensitive credentials (database passwords, admin user details) are managed via local `.env` file located in the `srcs` directory. Do not expose these file publicly.
 
 ## Basic Checks
 To ensure services are running correctly:
